@@ -5,13 +5,14 @@ const getRandomNum = function (min, max) {
     if (min > 0 && max > 0) {
       return Math.round(Math.random() * (max - min) + min);
     } else {
-      console.log('Введите положительные числа');
+      return ('Введите положительные числа');
     }
   } else {
-    console.log('Первое число должно быть больше второго');
+    return('Первое число должно быть больше второго');
   }
 };
 
+getRandomNum()
 //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random#получение_случайного_числа_в_заданном_интервале
 
 
@@ -21,9 +22,10 @@ const getFloatNum = function (min, max, float) {
     if (min > 0 && max > 0){
       const result = (Math.random() * (max - min) + min);
       return `${result.toFixed(float)}, количество знаков после запятой: ${float}`;
-    } else { console.log('Введите положительные числа')
+    } else { return('Введите положительные числа')
     }
-  } else {console.log('Первое число должно быть больше второго')
+  } else {return('Первое число должно быть больше второго')
   }
 }
 
+getFloatNum()
