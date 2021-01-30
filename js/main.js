@@ -16,15 +16,14 @@ const getRandomNum = function (min, max) {
 
 
 //Функция, возвращающая случайное число с плавающей точкой из переданного диапазона включительно
-const getRandomNum = function (min, max, float) {
+const getFloatNum = function (min, max, float) {
   if(min < max) {
     if (min > 0 && max > 0){
-    const result = (Math.random() * (max - min) + min);
-    return `${result.toFixed(float)}, количество знаков после запятой: ${float}`;
-
-  } else { console.log('Введите положительные числа')
-  }
+      const result = (Math.random() * (max - min) + min);
+      return `${result.toFixed(float)}, количество знаков после запятой: ${float}`;
+    } else { console.log('Введите положительные числа')
+    }
   } else {console.log('Первое число должно быть больше второго')
   }
-  }
+}
 
