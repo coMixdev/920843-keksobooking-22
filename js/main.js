@@ -4,13 +4,11 @@ const getRandomNum = (min, max) => {
   if (min > max){
     throw new Error('Первое число должно быть меньше второго');
   }
-  else {
-    return Math.round(Math.random() * (max - min) + min);
-  }
+  return Math.round(Math.random() * (max - min) + min);
 };
 
 
-getRandomNum();
+
 //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random#получение_случайного_числа_в_заданном_интервале
 
 
@@ -19,10 +17,7 @@ const getFloatNum = (min, max, float) => {
   if (min > max){
     throw new Error('Первое число должно быть меньше второго');
   }
-  else {
-    const result = Math.random() * (max - min) + min;
-    return result.toFixed(float);
-  }
+  const result = Math.random() * (max - min) + min;
+  return result.toFixed(float);
 }
 
-getFloatNum();
