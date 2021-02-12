@@ -61,17 +61,18 @@ const OPTIONS = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditi
 const PHOTOS_ADRESS = ['http://o0.github.io/assets/images/tokyo/hotel1.jpg', 'http://o0.github.io/assets/images/tokyo/hotel2.jpg', 'http://o0.github.io/assets/images/tokyo/hotel3.jpg'];
 const ADS_COUNT = 10;
 const AVATAR_COUNT = 8;
-const LOCATION_X = getFloatNum(35.65000, 35.70000, 5);
-const LOCATION_Y = getFloatNum(139.70000, 139.80000, 5);
+
 
 const createAdvertising = () => {
+  const LOCATION_X = getFloatNum(35.65000, 35.70000, 5);
+  const LOCATION_Y = getFloatNum(139.70000, 139.80000, 5);
   return {
     author : {
-      avatar: getAvatarUrl,
+      avatar: getAvatarUrl(),
     },
     offer : {
       title: 'Самое лучшее предложение',
-      adress: `location.${LOCATION_X}, location.${LOCATION_Y}`,
+      adress: `${LOCATION_X}, ${LOCATION_Y}`,
       price: getRandomNum(1, 100000),
       type : getRandomElement(TYPES),
       rooms : getRandomNum(1, 8),
