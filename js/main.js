@@ -1,3 +1,13 @@
+'use strict';
+
+const TYPES = ['palace', 'flat', 'house', 'bungalo'];
+const TIMES = ['12:00', '13:00', '14:00'];
+const OPTIONS = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
+const PHOTOS_ADRESS = ['http://o0.github.io/assets/images/tokyo/hotel1.jpg', 'http://o0.github.io/assets/images/tokyo/hotel2.jpg', 'http://o0.github.io/assets/images/tokyo/hotel3.jpg'];
+const ADS_COUNT = 10;
+const AVATAR_COUNT = 8;
+
+
 //Функция, возвращающая случайное целое число из переданного диапазона включительно
 
 const getRandomNum = (min, max) => {
@@ -54,13 +64,6 @@ const getRandomItem = (list) => {
   let newList = shuffled.slice(0, listLength);
   return newList;
 }
-
-const TYPES = ['palace', 'flat', 'house', 'bungalo'];
-const TIMES = ['12:00', '13:00', '14:00'];
-const OPTIONS = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
-const PHOTOS_ADRESS = ['http://o0.github.io/assets/images/tokyo/hotel1.jpg', 'http://o0.github.io/assets/images/tokyo/hotel2.jpg', 'http://o0.github.io/assets/images/tokyo/hotel3.jpg'];
-const ADS_COUNT = 10;
-const AVATAR_COUNT = 8;
 
 
 const createAdvertising = () => {
