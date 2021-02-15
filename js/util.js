@@ -56,5 +56,3 @@ export const getRandomArrayLength = (list) => {
   let newList = shuffled.slice(0, listLength);
   return newList;
 };
-
-

@@ -49,5 +49,3 @@ export const getAds = (adsNumber) => {
   const adverts = new Array(adsNumber).fill(null).map(createAdvertising);
   return adverts;
 };
-
-
