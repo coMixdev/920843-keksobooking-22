@@ -40,7 +40,7 @@ export const getRandomElement = (items) => {
 
 //Функция для перетасовки массива
 
-const getShuffled = (list) => {
+const shuffle = (list) => {
   for (let i = list.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [list[i], list[j]] = [list[j], list[i]];
@@ -51,7 +51,7 @@ const getShuffled = (list) => {
 //Функция для получения массива случайной длины
 
 export const getRandomArrayLength = (list) => {
-  let shuffled = getShuffled(list);
+  let shuffled = shuffle(list);
   let listLength = getRandomNum(1, list.length);
   let newList = shuffled.slice(0, listLength);
   return newList;

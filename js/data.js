@@ -1,7 +1,5 @@
 import { getRandomNum, getFloatNum, getAvatarUrl, getRandomElement, getRandomArrayLength } from './util.js'
 
-
-
 const TYPES = ['palace', 'flat', 'house', 'bungalo'];
 const TIMES = ['12:00', '13:00', '14:00'];
 const NUMBERS_DESCRIPTION = ['Номер класса делюкс с гидромассажной ванной', 'Стандартный номер с общей ванной', 'Номер с видом на сад'];
@@ -18,9 +16,6 @@ const GUESTS_MIN = 1;
 const GUESTS_MAX = 15;
 const ROOMS_MIN = 1;
 const ROOMS_MAX = 8;
-
-
-
 
 const createAdvertising = () => {
 
@@ -46,14 +41,13 @@ const createAdvertising = () => {
     location : {
       x : locationX,
       y : locationY,
-
     },
   }
 };
 
 export const getAds = (adsNumber) => {
-  const advert = new Array(adsNumber).fill(null).map(createAdvertising);
-  return advert;
+  const adverts = new Array(adsNumber).fill(null).map(createAdvertising);
+  return adverts;
 };
 
 
