@@ -1,3 +1,4 @@
+
 import { getAds } from './data.js';
 const ADS_COUNT = 10;
 
