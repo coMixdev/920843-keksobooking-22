@@ -1,7 +1,5 @@
-import {createAdvertising, ads} from './data.js';
+import { getAds } from './data.js';
+const ADS_COUNT = 10;
 
-//ads(ADS_COUNT);
+const ads = getAds(ADS_COUNT);
 
-window.createAdvertising = createAdvertising;
-
-console.log(createAdvertising(4))

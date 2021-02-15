@@ -1,18 +1,8 @@
-'use strict';
-
-export {getRandomNum, getFloatNum, getAvatarUrl, getRandomElement, shuffle, getRandomItem};
-
-const TYPES = ['palace', 'flat', 'house', 'bungalo'];
-const TIMES = ['12:00', '13:00', '14:00'];
-const OPTIONS = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
-const PHOTOS_ADRESS = ['http://o0.github.io/assets/images/tokyo/hotel1.jpg', 'http://o0.github.io/assets/images/tokyo/hotel2.jpg', 'http://o0.github.io/assets/images/tokyo/hotel3.jpg'];
-const ADS_COUNT = 10;
 const AVATAR_COUNT = 8;
-
 
 //Функция, возвращающая случайное целое число из переданного диапазона включительно
 
-const getRandomNum = (min, max) => {
+export const getRandomNum = (min, max) => {
   if (min > max){
     throw new Error('Первое число должно быть меньше второго');
   }
@@ -25,46 +15,46 @@ const getRandomNum = (min, max) => {
 
 
 //Функция, возвращающая случайное число с плавающей точкой из переданного диапазона включительно
-const getFloatNum = (min, max, float) => {
+export const getFloatNum = (min, max, float) => {
   if (min > max){
     throw new Error('Первое число должно быть меньше второго');
   }
   const result = Math.random() * (max - min) + min;
   return result.toFixed(float);
-}
+};
 
 
 //Функция для расчета номера изображения
-const getAvatarUrl = () => {
+export const getAvatarUrl = () => {
   const avatarNum = getRandomNum(1, AVATAR_COUNT);
   const url = `img/avatars/user0${avatarNum}.png`;
   return url;
 };
 
 //Функция для получения случайного значения из массива
-const getRandomElement = (items) => {
+export const getRandomElement = (items) => {
   const index = getRandomNum(0, items.length-1);
   const item = items[index];
   return item;
-}
+};
 
 //Функция для перетасовки массива
 
-const shuffle = (list) => {
+const getShuffled = (list) => {
   for (let i = list.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(Math.random() * (i + 1));
     [list[i], list[j]] = [list[j], list[i]];
   }
   return list;
-}
+};
 
 //Функция для получения массива случайной длины
 
-const getRandomItem = (list) => {
-  let shuffled = shuffle(list);
+export const getRandomArrayLength = (list) => {
+  let shuffled = getShuffled(list);
   let listLength = getRandomNum(1, list.length);
   let newList = shuffled.slice(0, listLength);
   return newList;
-}
+};
 
 
